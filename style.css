@@ -1,0 +1,78 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    color: #00FF00;
+    margin-bottom: 10px;
+}
+
+/* Main Input Area */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Search Bar Styles */
+#search-bar {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;  /* Rounded edges like Google search bar */
+    background-color: #1e1e1e;
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+/* Result Bubble Styles */
+.result-bubble {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #00FF00;  /* Bright green */
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgb(0, 255, 0);
+    font-size: 14px;
+    max-width: 300px;
+    text-align: center;
+    animation: fadeIn 0.5s, fadeOut 0.5s 4.5s;
+}
+
+/* Keyframes for Fade In/Out Animation */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    #search-bar {
+        width: 90%;
+    }
+}
